@@ -1,0 +1,37 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+import { MenuComponent } from './menu/menu.component';
+import { MealListComponent } from './meal-list/meal-list.component';
+import { MealInfoComponent } from './meal-info/meal-info.component';
+import { MealAlertComponent } from './meal-alert/meal-alert.component';
+import { CartService } from './cart.service';
+import { CartComponent } from './cart/cart.component';
+
+@NgModule({
+  declarations: [
+        AppComponent,
+        MenuComponent,
+        MealListComponent,
+        MealInfoComponent,
+        MealAlertComponent,
+        CartComponent
+  ],
+  imports: [
+        BrowserModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        RouterModule.forRoot([
+	        { path: '', component: MealListComponent },
+	        { path: 'meals/:mealId', component: MealInfoComponent },
+            { path: 'cart', component: CartComponent },
+        ])
+  ],
+  providers: [CartService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

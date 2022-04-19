@@ -1,0 +1,17 @@
+<h2>Meals</h2>
+<div *ngFor="let meal of meals; index as mealId">
+    <h3>
+        <a [title]="meal.name + ' info'"
+           [routerLink]="['/meals', mealId]">
+            {{ meal.name }}
+        </a>
+    </h3>
+    <p *ngIf="meal.description">
+        Description: {{ meal.description }}
+    </p>
+
+    <app-meal-alert [meal]="meal"
+                        (notify)="onNotify()">
+    </app-meal-alert>
+
+</div>

@@ -11,6 +11,7 @@ import { MealInfoComponent } from './meal-info/meal-info.component';
 import { MealAlertComponent } from './meal-alert/meal-alert.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,16 @@ import { CartComponent } from './cart/cart.component';
         MealListComponent,
         MealInfoComponent,
         MealAlertComponent,
-        CartComponent
+        CartComponent,
+        //LoginComponent
   ],
   imports: [
         BrowserModule,
         HttpClientModule,
         ReactiveFormsModule,
         RouterModule.forRoot([
-	        { path: '', component: MealListComponent },
+            { path: '', component: MealListComponent },
+          //  { path: 'login', component: LoginComponent },
 	        { path: 'meals/:mealId', component: MealInfoComponent },
             { path: 'cart', component: CartComponent },
         ])

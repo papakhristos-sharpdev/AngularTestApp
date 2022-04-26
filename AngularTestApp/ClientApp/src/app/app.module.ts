@@ -9,7 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MealListComponent } from './meal-list/meal-list.component';
 import { MealInfoComponent } from './meal-info/meal-info.component';
 import { MealAlertComponent } from './meal-alert/meal-alert.component';
-import { CartService } from './cart.service';
+import { CartService } from './services/cart.service';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 

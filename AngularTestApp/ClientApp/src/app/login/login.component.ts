@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 import { UserLogin } from '../user-login.module';
 
 @Component({

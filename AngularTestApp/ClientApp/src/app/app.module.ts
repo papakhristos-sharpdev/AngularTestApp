@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OAuthModule } from '@angular-oauth2-oidc';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -27,6 +28,7 @@ import { LoginComponent } from './login/login.component';
         BrowserModule,
         HttpClientModule,
         ReactiveFormsModule,
+        OAuthModule.forRoot(),
         RouterModule.forRoot([
             { path: '', component: MealListComponent },
           //  { path: 'login', component: LoginComponent },
